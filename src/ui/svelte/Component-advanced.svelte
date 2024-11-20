@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type MyPlugin from "../../main";
-	import { TasksView, type ViewState } from "@/features/view-tasks";
+	import { TasksView, type ViewState } from "@/features/tasks/view-tasks";
 	import { MarkdownRenderer, Plugin } from "obsidian";
 	import store from "./svelte-store";
 	import { onMount } from "svelte";

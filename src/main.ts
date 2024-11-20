@@ -28,11 +28,11 @@ import { inlinePlugin } from "@/ui/dataview/lp-render";
 import { addInlineFields } from "@/utils/html-fields";
 import { MetadataManager } from "@/features/metadata/metadata-manager";
 import { APIProxy } from "@/api";
-import { SamplePlugin } from "@ref/plugin";
+import { SamplePlugin } from "@/ref/plugin";
 import { PropertySuggest } from "@/features/property-suggest";
 import { Logger } from "@/utils/logging";
 import { ProxyRuntimeTest } from "./api/test";
-import { Features } from "./utils/mixins/mixins";
+import { FEATURES } from "@/utils/mixins/mixins";
 
 const SAMPLE = false;
 
@@ -41,9 +41,6 @@ export const enum NothingSelected {
 	autoSelect,
 	insertInline,
 	insertBare,
-
-
-	type RequiredProperty<T extends object> = { [P in keyof T]-?: Required<NonNullable<T[P]>>; };
 }
 
 export const DEFAULT_SETTINGS: DefaultSettings = {

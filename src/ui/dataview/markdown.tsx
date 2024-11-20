@@ -11,7 +11,7 @@ import {
 } from "preact";
 import { useContext, useEffect, useRef, useState } from "preact/hooks";
 import { Component } from "obsidian";
-import type { ClassySettings } from "@../../../src/settings";
+import ClassySettings from "@../../../src/settings";
 
 // import { FullIndex } from "data-index";
 // import { Literal, Values, Widgets } from "data-model/value";
@@ -24,6 +24,8 @@ import type { Literal } from "obsidian-dataview";
 
 export type MarkdownProps = { contents: string; sourcePath: string };
 export type MarkdownContext = { component: Component };
+
+// NOTE: This file is largely taken from the original Obsidian Dataview code. https://github.com/blacksmithgu/obsidian-dataview
 
 /** Context need to create dataviews. */
 export type DataviewInit = {

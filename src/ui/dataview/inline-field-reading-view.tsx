@@ -7,11 +7,12 @@ import {
 } from "obsidian";
 // import { render } from "preact";
 // import { DataviewContext, type DataviewInit, Lit } from "../markdown";
-import { type DataviewInit } from "../markdown";
-
-import { extractInlineFields } from "../../data-import/inline-field";
+import { type DataviewInit } from "./markdown";
+import { extractInlineFields } from "../../api/dataview/data-import/inline-field";
 import type { InlineField } from "./inline-field-live-preview";
 // import React from "preact/compat";
+
+// NOTE: This file is largely taken from the original Obsidian Dataview code. https://github.com/blacksmithgu/obsidian-dataview
 
 /** Replaces raw textual inline fields in text containers with pretty HTML equivalents. */
 export async function replaceInlineFields(

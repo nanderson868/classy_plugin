@@ -32,6 +32,8 @@ import type { MySettings } from "@/settings/index";
 import { selectionAndRangeOverlap } from "./lp-render";
 import { Logger } from "@/utils/logging";
 
+// NOTE: This file is largely taken from the original Obsidian Dataview code. https://github.com/blacksmithgu/obsidian-dataview
+
 const log = new Logger();
 
 class InlineFieldValue extends RangeValue {

@@ -5,7 +5,7 @@ import { MetadataManager } from "@/features/metadata/metadata-manager";
 import { DiscreteMode } from "@/features/privacy/discrete-mode";
 import MyPlugin from "@/main";
 import { Logger } from "@/utils/logging";
-import { MetadataMenu } from "@scripts/constants";
+// import { MetadataMenu } from "@scripts/constants";
 import { Plugin } from "obsidian";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -78,7 +78,8 @@ export abstract class ABase {
 	constructor(protected plugin: MyPlugin) {}
 
 	get settings() {
-		return this.plugin.settings.features[this];
+		return this.plugin.features[this]; // (Guess fix)
+		// return this.plugin.settings.features[this];
 	}
 
 	// sameAs(other: this) {

@@ -1,4 +1,5 @@
 import { PluginSettingTab, App, Setting, ButtonComponent } from "obsidian";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import MyPlugin, { DEFAULT_SETTINGS, NothingSelected } from "@/main";
 
 import TransformationSettings from "./transformations";

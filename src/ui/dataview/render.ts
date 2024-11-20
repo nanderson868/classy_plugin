@@ -3,15 +3,16 @@ import { App, Component, MarkdownRenderer } from "obsidian";
 import { type Literal } from "obsidian-dataview";
 // import { DataArray } from "src/data-model/data-array";
 
-import type { QuerySettings } from "@/settings";
+import type { MySettings } from "@/settings";
 import * as Values from "@/api/dataview/data-model/values";
 // import { currentLocale } from "util/locale";
 // import { renderMinimalDate, renderMinimalDuration } from "util/normalize";
 import * as Widgets from "@/api/dataview/data-model/widgets";
 import { currentLocale } from "@/utils/locale";
 import { renderMinimalDate, renderMinimalDuration } from "@/utils/normalize";
-
 export type ValueRenderContext = "root" | "list";
+
+// NOTE: This file is largely taken from the original Obsidian Dataview code. https://github.com/blacksmithgu/obsidian-dataview
 
 /** Render simple fields compactly, removing wrapping content like paragraph and span. */
 export async function renderCompactMarkdown(
@@ -84,7 +85,7 @@ export async function renderValue(
 	container: HTMLElement,
 	originFile: string,
 	component: Component,
-	settings: QuerySettings,
+	settings: MySettings,
 	expandList: boolean = false,
 	context: ValueRenderContext = "root",
 	depth: number = 0,

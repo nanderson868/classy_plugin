@@ -29,6 +29,8 @@ import {
 import type { SyntaxNode } from "@lezer/common";
 import type { Literal } from "obsidian-dataview";
 
+// NOTE: This file is largely taken from the original Obsidian Dataview code. https://github.com/blacksmithgu/obsidian-dataview
+
 export function selectionAndRangeOverlap(
 	selection: EditorSelection,
 	rangeFrom: number,

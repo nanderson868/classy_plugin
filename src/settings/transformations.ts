@@ -9,12 +9,14 @@ import {
 	MarkdownRenderer,
 	TextAreaComponent,
 } from "obsidian";
-import { BaseSettings } from "@/utils/mixins/mixins";
+import BaseSettings from "@/utils/mixins/mixins";
 import IconsPickerModal from "../ui/components/modal-icon-picker";
 import MyPlugin from "@/main";
 import { addInlineFields } from "@/utils/html-fields";
 import { Logger } from "@/utils/logging";
-x;
+
+// NOTE: This file appears to be outdated
+
 export default class TransformationSettings extends BaseSettings {
 	private app: App;
 	private textPattern!: TextComponent;
