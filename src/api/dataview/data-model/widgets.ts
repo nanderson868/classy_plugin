@@ -5,6 +5,8 @@ import {
 	type Literal,
 } from "./value";
 
+// NOTE: This file is largely taken from the original Obsidian Dataview code. https://github.com/blacksmithgu/obsidian-dataview
+
 /** Create a list pair widget matching the given key and value. */
 export function listPair(key: Literal, value: Literal): ListPairWidget {
 	return new ListPairWidget(key, value);

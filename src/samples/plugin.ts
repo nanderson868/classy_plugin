@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Editor, MarkdownView, Notice, TFile, TFolder, Plugin } from "obsidian";
-import { SampleModal } from "@/ref/modal";
+import { SampleModal } from "@/samples/modal";
 import moment from "moment";
 import { add } from "@/ui/widgets/state-field-calc";
 

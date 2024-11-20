@@ -28,11 +28,12 @@ import { inlinePlugin } from "@/ui/dataview/lp-render";
 import { addInlineFields } from "@/utils/html-fields";
 import { MetadataManager } from "@/features/metadata/metadata-manager";
 import { APIProxy } from "@/api";
-import { SamplePlugin } from "@/ref/plugin";
+import { SamplePlugin } from "@/samples/plugin";
 import { PropertySuggest } from "@/features/property-suggest";
 import { Logger } from "@/utils/logging";
 import { ProxyRuntimeTest } from "./api/test";
 import { FEATURES } from "@/utils/mixins/mixins";
+import FeatureEnabled from "@/utils/mixins/mixins";
 
 const SAMPLE = false;
 
@@ -69,7 +70,7 @@ export const DEFAULT_SETTINGS: DefaultSettings = {
 };
 
 export default class MyPlugin extends Plugin {
-	features = new FeatureEnabled(this);
+	features = new FeatureEnabled(this.app, this);
 	settings!: MySettings;
 
 	proxy = new APIProxy(app)

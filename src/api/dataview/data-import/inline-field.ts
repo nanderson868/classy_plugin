@@ -1,6 +1,8 @@
 import type { Literal } from "obsidian-dataview";
 import type { InlineField } from "@/ui/dataview/inline-field-live-preview";
 
+// NOTE: This file is largely taken from the original Obsidian Dataview code. https://github.com/blacksmithgu/obsidian-dataview
+
 /** Extracts inline fields of the form '[key:: value]' from a line of text. This is done in a relatively
  * "robust" way to avoid failing due to bad nesting or other interfering Markdown symbols:
  *

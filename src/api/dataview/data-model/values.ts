@@ -11,6 +11,8 @@ import {
 } from "./value";
 import { DEFAULT_QUERY_SETTINGS, type QuerySettings } from "@/settings";
 
+// NOTE: This file is largely taken from the original Obsidian Dataview code. https://github.com/blacksmithgu/obsidian-dataview
+
 /** Convert an arbitrary value into a reasonable, Markdown-friendly string if possible. */
 export function toString(
 	field: unknown,

@@ -5,6 +5,8 @@ export type ArrayFunc<T, O> = (elem: T, index: number, arr: T[]) => O;
 /** A function which compares two types. */
 export type ArrayComparator<T> = (a: T, b: T) => number;
 
+// NOTE: This file is largely taken from the original Obsidian Dataview code. https://github.com/blacksmithgu/obsidian-dataview
+
 /**
  * Proxied interface which allows manipulating array-based data. All functions on a data array produce a NEW array
  * (i.e., the arrays are immutable).

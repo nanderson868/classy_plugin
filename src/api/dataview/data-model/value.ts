@@ -5,6 +5,8 @@
 import { DateTime, Duration } from "luxon";
 import * as Values from "./values";
 
+// NOTE: This file is largely taken from the original Obsidian Dataview code. https://github.com/blacksmithgu/obsidian-dataview
+
 /** Shorthand for a mapping from keys to values. */
 export type DataObject = { [key: string]: Literal };
 /** The literal types supported by the query engine. */
