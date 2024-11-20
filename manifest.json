@@ -1,0 +1,11 @@
+{
+	"id": "classy",
+	"name": "Classy",
+	"version": "1.0.1",
+	"minAppVersion": "0.15.0",
+	"description": "A classy plugin for Obsidian.",
+	"author": "Obsidian",
+	"authorUrl": "https://obsidian.md",
+	"fundingUrl": "https://obsidian.md/pricing",
+	"isDesktopOnly": false
+}

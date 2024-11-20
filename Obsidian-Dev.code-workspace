@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../Scripts"
+		},
+		{
+			"path": "../../../.obsidian"
+		}
+	],
+	"settings": {
+		"typescript.tsdk": "plugin/node_modules/typescript/lib"
+	}
+}

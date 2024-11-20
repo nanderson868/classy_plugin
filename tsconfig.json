@@ -1,0 +1,76 @@
+{
+	"extends": "@tsconfig/svelte/tsconfig.json",
+	"compilerOptions": {
+		"allowJs": true,
+
+		// "target": "ESNext",
+		// "module": "ESNext",
+
+		"module": "NodeNext",
+		"target": "ES2020", // "target": "ES6",
+		"moduleResolution": "NodeNext",
+		"jsx": "react",
+		"types": ["svelte", "node"],
+
+		// Type Compatibility
+		"esModuleInterop": true,
+		"verbatimModuleSyntax": false,
+
+		// Source Maps
+		"inlineSourceMap": false, // conflicts with the Svelte configuration (In Obsidian guide)
+		"inlineSources": true,
+
+		// Type Checking
+		"noImplicitAny": true,
+		"strictNullChecks": true,
+		"lib": ["DOM", "ES5", "ES6", "ES7"],
+
+		// Import/Export & Aliases
+
+		"resolveJsonModule": true,
+		"allowSyntheticDefaultImports": true,
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["src/*"], // Alias for src directory
+			"@scripts/*": ["scripts/*"], // Alias for scripts directory
+			"@ref/*": ["ref/*"] // Alias for scripts directory
+			// "obsidian": ["node_modules/obsidian"],
+			// 	"@constants": ["constants.ts"],
+			// 	"@data-import": ["edata-import"],
+		},
+		"importHelpers": true,
+		"isolatedModules": true,
+		// Strict Compilation Settings:
+		"strict": true,
+		"strictFunctionTypes": true,
+		"strictBindCallApply": true,
+		"strictPropertyInitialization": true,
+		"noImplicitThis": true,
+		"alwaysStrict": true,
+		"outDir": "dist",
+
+		// Experimental
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true
+	},
+	"include": [
+		"**/*.ts",
+		"**/*.svelte",
+		"ui/markdown.tsx",
+		"scripts/index.mjs",
+		"archive/proxy/proxyfooo.ts",
+		"src/api/test.ts",
+		"archive/proxy/proxy.ts",
+		"archive/proxy/app.ts"
+	],
+	"exclude": ["node_modules", "archive"],
+	"overrides": [
+		{
+			// "path": "./scripts",
+			"files": ["scripts/index.ts"], // Adjust the path to your specific files or directories
+			"compilerOptions": {
+				"noImplicitAny": false
+			}
+		}
+	]
+}
